@@ -1,0 +1,20 @@
+version: "1"
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7.25
+    #se va a crear una carpeta sql-data/db y ahi se va a copiar todo lo que tenga var/lib/mysql que es donde se guardan los datos de mysql del contenedor
+    #la información permanecera aun se borre el contenedor
+    volumes:
+      - ./sql-data/db:/var/lib/mysql
+    #puerto externo: puerto interno docker
+    ports:
+      - "3306:3306"
+    hostname: localhost
+    enviroment:
+      MYSQL_DATABASE: 'test_database'
+      MYSQL_USER: 'usuario'
+      MYSQL_PASSWORD: 'usuario'
+      MYSQL_ROOT_PASSWORD: 'root'
+      

@@ -1,0 +1,7 @@
+1.- Ver fichero docker_compose.yaml
+2.- Abrimos un terminal en el directorio de trabajo donde este el docker-compose y ponermos "docker-compose up"
+
+3.- Por ejemplo con MSQL Workbench podemos establecer la conexión a la bd
+4.- hostname: localhost o 127.0.0.1, puerto: 3306, username: root, password: root y le ponermos nombre a la conexion
+
+5.- se puede comprobar que en la carpeta sql-data/db esta toda la estructura de datos del contenedor mysql
